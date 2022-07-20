@@ -3,6 +3,12 @@
 /* fonts css end */
 
 /* common css start */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
@@ -29,6 +35,36 @@ hr{
     margin-top: 3px;
 }
 /* common css end */
+/* header css start */
+header{
+    background-color:#562EFF ;
+}
+header > nav.container{
+    background-color:#562EFF ;
+    width: 870px;
+    padding: 30px  0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+}
+header img{
+    max-width: 56px;
+}
+.logo{
+    display: flex;
+    align-items: center;   
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+}
+.logo span,.menu a {
+    color:#FFF;
+    margin-left: 10px;
+}
 /* Top player css start */
 .top_players{
     margin-bottom: 30px;
@@ -88,6 +124,12 @@ hr{
     grid-template-columns: repeat(3,1fr);
     grid-column-gap:24px;
 }
+.course {
+    padding: 10px;
+    box-shadow: 0px 5.34229px 13.3557px rgb(0 0 0 / 10%);
+    background-color: #FFF;
+    border-radius: 20px;
+}
 .course .course_banner img{
     width: 224px;
     height: 104px;
@@ -97,11 +139,20 @@ hr{
     align-items: center;
     justify-content: space-between;
 }
+.course_autor {
+    color:#ED6B4F;
+}
 .fa-star.filled{
     color:#FFC014;
 }
-.fa-star.empty{
+.fa-star.empty,.rating span{
     color:#AEAEAE;
+}
+.course_duration{
+    color: #FF4A60;
+    background-color: #FFE4E8;
+    border-radius: 25px;
+    padding: 6px 10px;
 }
 /* Latest courses section End */
 /* Responsive css start */
@@ -116,6 +167,9 @@ hr{
     .player, .blog{
         flex-direction: column;
     }
+    .courses{
+        grid-row-gap:24px;
+    }
 }
 /* tablet Devices */
 @media screen and (min-width:689px) and (max-width:992px) {
@@ -125,8 +179,15 @@ hr{
     .players , .courses{
         grid-template-columns: repeat(2,1fr);
     }
+    
     .blogs{
         grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-row-gap:24px;
+    }
+    .course {
+        padding: 20px;
     }
 }
 /* Responsive css end */
